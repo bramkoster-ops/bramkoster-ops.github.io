@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bram Koster — Free Unit-Economics Tools, Audits &amp; 8 PM Playbooks</title>
-  <meta name="description" content="Free unit-economics calculators, P&L teardown checklists, and 10-hour/week build playbooks. Audited against 21% VAT, CAC, churn rate, and operational drag.">
+  <meta name="description" content="Free unit-economics calculators, P&L teardown checklists, audited reading lists, and 10-hour/week build playbooks. Audited against 21% VAT, CAC, churn rate, and operational drag.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -49,7 +49,7 @@
     /* Sticky Navbar */
     .navbar {
       position: sticky; top: 0; z-index: 40;
-      background: rgba(250, 248, 244, 0.88);
+      background: rgba(250, 248, 244, 0.9);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
@@ -65,14 +65,14 @@
       background: var(--amber-soft); color: #92400e; font-size: 0.72rem; font-weight: 700;
       padding: 0.2rem 0.55rem; border-radius: 999px;
     }
-    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links { display: flex; align-items: center; gap: 1.35rem; }
     .nav-links a {
-      text-decoration: none; color: var(--ink-soft); font-size: 0.88rem; font-weight: 600; transition: color 0.15s;
+      text-decoration: none; color: var(--ink-soft); font-size: 0.86rem; font-weight: 600; transition: color 0.15s;
     }
     .nav-links a:hover { color: var(--amber); }
     .nav-btn {
-      background: var(--navy); color: var(--white) !important; padding: 0.55rem 1.15rem;
-      border-radius: 999px; font-size: 0.85rem !important; transition: transform 0.15s, background 0.15s !important;
+      background: var(--navy); color: var(--white) !important; padding: 0.55rem 1.1rem;
+      border-radius: 999px; font-size: 0.84rem !important; transition: transform 0.15s, background 0.15s !important;
     }
     .nav-btn:hover { background: var(--amber); transform: translateY(-1px); }
 
@@ -105,7 +105,8 @@
       display: inline-flex; align-items: center; gap: 0.5rem;
       background: linear-gradient(135deg, var(--amber), var(--amber-bright)); color: var(--white);
       font-weight: 700; font-size: 0.95rem; padding: 0.9rem 1.55rem; border-radius: var(--radius-md);
-      text-decoration: none; box-shadow: 0 10px 24px -6px rgba(217, 119, 6, 0.45);
+      text-decoration: none; border: none; cursor: pointer; font-family: inherit;
+      box-shadow: 0 10px 24px -6px rgba(217, 119, 6, 0.45);
       transition: transform 0.15s, box-shadow 0.15s;
     }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -6px rgba(217, 119, 6, 0.55); }
@@ -113,7 +114,8 @@
       display: inline-flex; align-items: center; gap: 0.5rem;
       background: var(--white); border: 1px solid var(--border); color: var(--ink);
       font-weight: 700; font-size: 0.95rem; padding: 0.9rem 1.45rem; border-radius: var(--radius-md);
-      text-decoration: none; box-shadow: var(--shadow-sm); transition: border-color 0.15s, transform 0.15s;
+      text-decoration: none; cursor: pointer; font-family: inherit;
+      box-shadow: var(--shadow-sm); transition: border-color 0.15s, transform 0.15s;
     }
     .btn-secondary:hover { border-color: var(--amber); transform: translateY(-1px); }
     .proof-bar { display: flex; flex-wrap: wrap; gap: 1.25rem; font-size: 0.83rem; font-weight: 600; color: var(--muted); }
@@ -144,14 +146,14 @@
       letter-spacing: 0.08em; color: #92400e; background: var(--amber-soft);
       padding: 0.25rem 0.7rem; border-radius: 999px; margin-bottom: 0.8rem;
     }
-    .sec-head { max-width: 650px; margin-bottom: 2.25rem; }
+    .sec-head { max-width: 670px; margin-bottom: 2.25rem; }
     .sec-head h2 {
       font-family: 'Fraunces', Georgia, serif; font-size: 2.3rem; font-weight: 700;
       line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 0.55rem; color: var(--ink);
     }
     .sec-head p { color: var(--ink-soft); font-size: 1.02rem; }
 
-    /* Tool 1: Free Operator Vault */
+    /* Section 1: Free Operator Vault */
     .vault-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
     .vault-card {
       background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg);
@@ -174,7 +176,7 @@
     }
     .vault-btn:hover { background: var(--navy); color: var(--white); border-color: var(--navy); }
 
-    /* Tool 2: Dark Navy Contrast Simulator */
+    /* Section 2: Unit-Economics Simulator */
     .sim-shell {
       background: var(--navy); color: var(--white); border-radius: var(--radius-xl);
       padding: 2.25rem; box-shadow: var(--shadow-lg);
@@ -224,21 +226,21 @@
       display: flex; justify-content: space-between; font-size: 0.84rem; font-weight: 600; color: var(--amber-bright);
     }
 
-    /* Tool 3: Interactive Go/No-Go Scorecard */
+    /* Section 3: Go/No-Go Scorecard */
     .score-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 2rem; align-items: start; }
     .check-list { display: flex; flex-direction: column; gap: 0.75rem; }
     .check-item {
-      display: flex; align-items: flex-start; gap: 0.9rem; background: var(--bg);
+      display: flex; align-items: flex-start; gap: 0.9rem; background: var(--white);
       border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem 1.15rem;
-      cursor: pointer; transition: border-color 0.15s, background 0.15s;
+      cursor: pointer; transition: border-color 0.15s;
     }
     .check-item:hover { border-color: var(--amber); }
     .check-item input { width: 19px; height: 19px; accent-color: var(--emerald); margin-top: 0.15rem; cursor: pointer; }
     .check-item strong { display: block; font-size: 0.95rem; color: var(--ink); }
     .check-item span { font-size: 0.84rem; color: var(--muted); }
     .score-panel {
-      background: var(--bg); border: 2px solid var(--border); border-radius: var(--radius-lg);
-      padding: 1.75rem; text-align: center; position: sticky; top: 5.5rem;
+      background: var(--white); border: 2px solid var(--border); border-radius: var(--radius-lg);
+      padding: 1.75rem; text-align: center; position: sticky; top: 5.5rem; box-shadow: var(--shadow-sm);
     }
     .score-num { font-family: 'Fraunces', Georgia, serif; font-size: 3.5rem; font-weight: 700; line-height: 1; margin: 0.5rem 0; }
     .score-badge {
@@ -247,21 +249,81 @@
     }
     .score-msg { font-size: 0.9rem; color: var(--ink-soft); }
 
-    /* Channels & Cadence */
+    /* Section 4: The Audited Bookshelf */
+    .book-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    .book-card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg);
+      padding: 1.6rem; display: flex; flex-direction: column; justify-content: space-between;
+      transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+    }
+    .book-card.featured {
+      background: linear-gradient(180deg, #fffbeb 0%, var(--white) 100%);
+      border-color: var(--amber);
+      box-shadow: var(--shadow-sm);
+    }
+    .book-card:hover { transform: translateY(-2px); border-color: var(--amber); box-shadow: var(--shadow-md); }
+    .book-meta { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; margin-bottom: 0.7rem; }
+    .book-tag {
+      font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;
+      color: #92400e; background: var(--amber-soft); padding: 0.2rem 0.6rem; border-radius: 6px;
+    }
+    .book-author { font-size: 0.82rem; font-weight: 600; color: var(--muted); }
+    .book-card h3 { font-family: 'Fraunces', Georgia, serif; font-size: 1.28rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.75rem; color: var(--ink); }
+    .takeaway-box {
+      background: var(--white); border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0;
+      padding: 0.75rem 0.95rem; font-size: 0.88rem; color: var(--ink-soft); margin-bottom: 1.15rem;
+    }
+    .takeaway-box strong { color: var(--ink); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 0.2rem; }
+    .book-link {
+      display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 700;
+      color: var(--ink); text-decoration: none; transition: color 0.15s;
+    }
+    .book-link:hover { color: var(--amber); }
+
+    /* Section 5: Off the Clock / Belgian Beer Card */
+    .beer-shell {
+      background: linear-gradient(135deg, #271b12 0%, #1c140e 100%);
+      color: #fef3c7; border-radius: var(--radius-xl); padding: 2.5rem;
+      display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2.5rem; align-items: center;
+      box-shadow: var(--shadow-lg); border: 1px solid rgba(245, 158, 11, 0.25);
+    }
+    .beer-kicker {
+      display: inline-block; font-size: 0.74rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.08em; color: var(--amber-bright); background: rgba(245, 158, 11, 0.16);
+      padding: 0.25rem 0.7rem; border-radius: 999px; margin-bottom: 0.85rem;
+    }
+    .beer-shell h2 {
+      font-family: 'Fraunces', Georgia, serif; font-size: 2.05rem; line-height: 1.18;
+      color: var(--white); margin-bottom: 0.85rem;
+    }
+    .beer-shell p { color: #e7dec8; font-size: 0.96rem; margin-bottom: 1rem; }
+    .beer-styles { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1.1rem; }
+    .beer-styles span {
+      font-size: 0.76rem; font-weight: 600; color: #fde68a; background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(253, 230, 138, 0.2); padding: 0.25rem 0.65rem; border-radius: 999px;
+    }
+    .beer-card-box {
+      background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: var(--radius-lg); padding: 1.65rem;
+    }
+    .beer-card-box h3 { font-family: 'Fraunces', Georgia, serif; font-size: 1.35rem; color: var(--white); margin-bottom: 0.5rem; }
+    .beer-card-box p { font-size: 0.88rem; color: #d6cbb5; margin-bottom: 1.25rem; }
+    .beer-meta { font-size: 0.76rem; color: #fbbf24; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.45rem; }
+
+    /* Channels & CTA */
     .chan-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
     .chan-card {
-      background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg);
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg);
       padding: 1.5rem; text-decoration: none; color: inherit; display: flex; flex-direction: column;
-      justify-content: space-between; box-shadow: var(--shadow-sm); transition: transform 0.15s, border-color 0.15s;
+      justify-content: space-between; transition: transform 0.15s, border-color 0.15s;
     }
-    .chan-card:hover { transform: translateY(-2px); border-color: var(--amber); }
+    .chan-card:hover { transform: translateY(-2px); border-color: var(--amber); background: var(--white); box-shadow: var(--shadow-sm); }
     .chan-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem; }
     .chan-tag { font-size: 0.74rem; font-weight: 800; text-transform: uppercase; color: var(--amber); letter-spacing: 0.05em; }
     .chan-card h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 0.35rem; }
     .chan-card p { font-size: 0.9rem; color: var(--ink-soft); margin-bottom: 1rem; }
     .chan-link { font-size: 0.84rem; font-weight: 700; color: var(--ink); }
 
-    /* Newsletter Banner */
     .sub-banner {
       background: linear-gradient(135deg, var(--navy) 0%, #1e293b 100%); color: var(--white);
       border-radius: var(--radius-xl); padding: 3rem 2.5rem; text-align: center; box-shadow: var(--shadow-lg);
@@ -269,14 +331,12 @@
     .sub-banner h2 { font-family: 'Fraunces', Georgia, serif; font-size: 2.25rem; margin-bottom: 0.75rem; }
     .sub-banner p { color: #cbd5e1; max-width: 56ch; margin: 0 auto 1.75rem; font-size: 1rem; }
 
-    footer {
-      border-top: 1px solid var(--border); padding: 2.25rem 0; font-size: 0.86rem; color: var(--muted);
-    }
+    footer { border-top: 1px solid var(--border); padding: 2.25rem 0; font-size: 0.86rem; color: var(--muted); }
     .foot-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
     footer a { color: var(--ink-soft); text-decoration: none; font-weight: 600; }
     footer a:hover { color: var(--amber); }
 
-    /* Modal for Vault Assets */
+    /* Modal */
     .modal-backdrop {
       position: fixed; inset: 0; background: rgba(15, 23, 42, 0.65); backdrop-filter: blur(4px);
       display: none; align-items: center; justify-content: center; padding: 1.25rem; z-index: 100;
@@ -299,8 +359,8 @@
     }
     .modal-actions { display: flex; justify-content: flex-end; gap: 0.75rem; }
 
-    @media (max-width: 820px) {
-      .hero, .sim-grid, .score-grid, .vault-grid, .chan-grid { grid-template-columns: 1fr; }
+    @media (max-width: 840px) {
+      .hero, .sim-grid, .score-grid, .vault-grid, .book-grid, .beer-shell, .chan-grid { grid-template-columns: 1fr; }
       .hero h1 { font-size: 2.5rem; }
       .nav-links a:not(.nav-btn) { display: none; }
       .profile-card { max-width: 340px; }
@@ -315,8 +375,8 @@
       <nav class="nav-links">
         <a href="#vault">Free Vault</a>
         <a href="#simulator">Margin Audit</a>
-        <a href="#scorecard">Idea Scorecard</a>
-        <a href="#channels">Channels</a>
+        <a href="#bookshelf">Bookshelf</a>
+        <a href="#glassware">Beer</a>
         <a href="https://bramkoster1985.substack.com" target="_blank" rel="noopener" class="nav-btn">The Friday Audit →</a>
       </nav>
     </div>
@@ -327,10 +387,10 @@
     <div class="container">
       <div class="hero">
         <div>
-          <div class="pill"><span class="dot"></span> 100% Free Tools — No Paywalls, No Pitch Decks</div>
+          <div class="pill"><span class="dot"></span> 100% Free Operator Tools — Zero Paywalls</div>
           <h1>Stop trusting revenue screenshots. <em>Run the actual numbers.</em></h1>
           <p class="hero-sub">
-            I spent 15 years auditing European supply chains and manufacturing sites. Now I publish <strong>free unit-economics calculators, P&amp;L teardown checklists, and 10-hour/week build playbooks</strong>—engineered strictly between 8:00 PM and 11:00 PM.
+            15 years auditing European supply chains and manufacturing sites taught me to ignore pitch decks and check the ledger. Here you'll find <strong>free unit-economics tools, P&amp;L teardown checklists, and my audited reading list</strong>—built strictly between 8:00 PM and 11:00 PM.
           </p>
           <div class="cta-row">
             <a href="#vault" class="btn-primary">Open the Free Vault ↓</a>
@@ -360,9 +420,9 @@
   <section id="vault">
     <div class="container">
       <div class="sec-head">
-        <span class="kicker">Giveaway Vault — €0 Forever</span>
+        <span class="kicker">Open-Source Vault — €0 Forever</span>
         <h2>Steal my entire 8 PM operating system.</h2>
-        <p>Most people gate basic checklists behind a €97 PDF or a 14-day email funnel. Click any asset below to read and copy the exact system immediately.</p>
+        <p>No email capture traps and no €97 PDFs. Click any operational asset below to read and copy the exact checklist immediately.</p>
       </div>
 
       <div class="vault-grid">
@@ -373,7 +433,7 @@
               <span class="vault-type">DM Keyword: AUDIT</span>
             </div>
             <h3>The 7-Line Side-Hustle P&amp;L Audit</h3>
-            <p>The exact spreadsheet columns I use to dissect viral income claims—accounting for 21% VAT, CAC, gateway fees, churn rate, and unpaid support hours.</p>
+            <p>The exact columns I use to stress-test viral income claims—accounting for 21% VAT, CAC, payment fees, churn rate, and unpaid support hours.</p>
           </div>
           <button class="vault-btn" onclick="openAsset('audit')">Read &amp; Copy Checklist →</button>
         </div>
@@ -385,7 +445,7 @@
               <span class="vault-type">8:00 PM – 11:00 PM</span>
             </div>
             <h3>The 10-Hour/Week Build Schedule</h3>
-            <p>How to build boring cash flow alongside a full-time career and family without burning out—broken down by exact evening blocks and weekly deliverables.</p>
+            <p>How to build boring cash flow alongside a full-time career and family—broken down by exact evening blocks and weekly deliverables.</p>
           </div>
           <button class="vault-btn" onclick="openAsset('schedule')">Read &amp; Copy Schedule →</button>
         </div>
@@ -397,7 +457,7 @@
               <span class="vault-type">DM Keyword: STACK</span>
             </div>
             <h3>The €0–€49 Lean Operator Stack</h3>
-            <p>Zero-bloat software for niche B2B directories, single-problem micro-SaaS, and automated workflows. Keep fixed overhead flat until cash flow clears.</p>
+            <p>Zero-bloat software for niche B2B directories, single-problem micro-SaaS, and automated service workflows. Keep fixed overhead flat.</p>
           </div>
           <button class="vault-btn" onclick="openAsset('stack')">Read &amp; Copy Tech Stack →</button>
         </div>
@@ -405,11 +465,11 @@
         <div class="vault-card">
           <div>
             <div class="vault-top">
-              <span class="vault-badge">Curated List</span>
+              <span class="vault-badge">Quick Copy</span>
               <span class="vault-type">DM Keyword: BOOKS</span>
             </div>
-            <h3>The Audited Bookshelf (Zero Fluff)</h3>
-            <p>Five operational, pricing, and systems books that actually survive real-world unit economics—no mindset filler, just durable frameworks.</p>
+            <h3>The Audited Bookshelf (Plain Text)</h3>
+            <p>All six operational, pricing, and digital-product books listed below—formatted cleanly to paste straight into your reading tracker.</p>
           </div>
           <button class="vault-btn" onclick="openAsset('books')">Read &amp; Copy Reading List →</button>
         </div>
@@ -423,7 +483,7 @@
       <div class="sec-head">
         <span class="kicker">Interactive Audit Tool</span>
         <h2>Let's run the actual numbers.</h2>
-        <p>Pick a popular side-hustle preset or drag the sliders. See how fast a flashy gross revenue screenshot collapses under European VAT, ad spend, and fulfillment drag.</p>
+        <p>Load a preset or move the sliders to see what remains of a flashy gross-revenue screenshot after European VAT, ad spend, and operational drag.</p>
       </div>
 
       <div class="sim-shell">
@@ -462,7 +522,7 @@
           <div class="ledger">
             <div class="ledger-top">
               <span>Audited Monthly P&amp;L</span>
-              <span class="verdict" id="o-verdict">MARGIN TRAP</span>
+              <span class="verdict" id="o-verdict">PROCESS FAILURE</span>
             </div>
             <div class="l-row"><span>Gross Revenue Claimed</span><span id="o-gross">€10,000</span></div>
             <div class="l-row neg"><span>- 21% VAT (Included)</span><span id="o-vat">-€1,736</span></div>
@@ -484,32 +544,32 @@
     </div>
   </section>
 
-  <!-- Section 3: Interactive 8 PM Go/No-Go Scorecard -->
+  <!-- Section 3: Interactive Go/No-Go Scorecard -->
   <section id="scorecard">
     <div class="container">
       <div class="sec-head">
         <span class="kicker">Pre-Flight Audit</span>
         <h2>Will your idea survive a 10-hour/week budget?</h2>
-        <p>Before you spend five months building an asset, tick every operational constraint your idea actually passes:</p>
+        <p>Before committing 5–6 months of tedious evening setup, tick every operational constraint your idea actually clears:</p>
       </div>
 
       <div class="score-grid">
         <div class="check-list">
           <label class="check-item">
             <input type="checkbox" class="sc-box" onchange="updateScore()">
-            <div><strong>Zero daytime client calls required</strong><span>Fulfillment and sales work asynchronously between 8:00 PM and 11:00 PM.</span></div>
+            <div><strong>Zero daytime client calls required</strong><span>Fulfillment and onboarding run asynchronously between 8:00 PM and 11:00 PM.</span></div>
           </label>
           <label class="check-item">
             <input type="checkbox" class="sc-box" onchange="updateScore()">
-            <div><strong>Net margin clears 40%+ after 21% VAT &amp; fees</strong><span>Enough buffer to absorb rising acquisition costs without bleeding cash.</span></div>
+            <div><strong>Net margin clears 40%+ after 21% VAT &amp; fees</strong><span>Enough cushion to survive rising acquisition costs without bleeding cash.</span></div>
           </label>
           <label class="check-item">
             <input type="checkbox" class="sc-box" onchange="updateScore()">
-            <div><strong>Fixed monthly overhead stays under €100</strong><span>No fragile software bloat before your first 10 paying customers arrive.</span></div>
+            <div><strong>Fixed monthly overhead stays under €100</strong><span>No software bloat before your first 10 paying customers settle their invoices.</span></div>
           </label>
           <label class="check-item">
             <input type="checkbox" class="sc-box" onchange="updateScore()">
-            <div><strong>Solves one dull, verifiable B2B or workflow bottleneck</strong><span>Customers pay to eliminate operational drag, not for novelty.</span></div>
+            <div><strong>Solves one dull, verifiable workflow bottleneck</strong><span>Buyers pay to remove operational drag, not for novelty.</span></div>
           </label>
           <label class="check-item">
             <input type="checkbox" class="sc-box" onchange="updateScore()">
@@ -517,11 +577,11 @@
           </label>
           <label class="check-item">
             <input type="checkbox" class="sc-box" onchange="updateScore()">
-            <div><strong>You can tolerate 5–6 months of tedious setup</strong><span>Zero expectation of instant cash—patience and process control come first.</span></div>
+            <div><strong>You can tolerate 5–6 months of quiet setup</strong><span>Zero expectation of instant cash—process control and patience come first.</span></div>
           </label>
         </div>
 
-        <div class="score-panel" id="score-panel">
+        <div class="score-panel">
           <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; color:var(--muted);">Audit Readiness Score</div>
           <div class="score-num" id="s-num">0/6</div>
           <div class="score-badge" id="s-badge" style="background:var(--rose-soft); color:var(--rose);">Process Failure Risk</div>
@@ -531,7 +591,151 @@
     </div>
   </section>
 
-  <!-- Section 4: Channels & Weekly Cadence -->
+  <!-- Section 4: The Audited Bookshelf -->
+  <section id="bookshelf" class="section-alt">
+    <div class="container">
+      <div class="sec-head">
+        <span class="kicker">The Audited Bookshelf</span>
+        <h2>Six books that survive real-world unit economics.</h2>
+        <p>No motivational filler. Each title below earned shelf space because its framework holds up when you actually inspect the P&amp;L.</p>
+      </div>
+
+      <div class="book-grid">
+        <!-- Featured Book: Jaco Roets -->
+        <div class="book-card featured">
+          <div>
+            <div class="book-meta">
+              <span class="book-tag">9-to-5 Playbook</span>
+              <span class="book-author">Jaco Roets</span>
+            </div>
+            <h3>Build Once, Sell Daily: Turning Everyday Expertise into Profitable Digital Products Alongside Your 9-to-5</h3>
+            <div class="takeaway-box">
+              <strong>Bram's Audit Takeaway</strong>
+              Finally a digital-product playbook built for adults with day jobs. Skip "quit your 9-to-5" theater—package operational know-how you already own into a repeatable, low-drag asset that scales without adding daytime calls.
+            </div>
+          </div>
+          <!-- Replace this search URL with your direct /dp/ASIN link once KDP review completes -->
+          <a href="https://www.amazon.com/s?k=Build+Once+Sell+Daily+Jaco+Roets" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+        </div>
+
+        <!-- Book 2: The Goal -->
+        <div class="book-card">
+          <div>
+            <div class="book-meta">
+              <span class="book-tag">Operations</span>
+              <span class="book-author">Eliyahu M. Goldratt</span>
+            </div>
+            <h3>The Goal: A Process of Ongoing Improvement</h3>
+            <div class="takeaway-box">
+              <strong>Bram's Audit Takeaway</strong>
+              Terrible novel, essential systems manual. Every hour spent optimizing anything other than your primary bottleneck is pure operational drag—especially when you only have 10 hours a week.
+            </div>
+          </div>
+          <a href="https://www.amazon.com/dp/0884271951" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+        </div>
+
+        <!-- Book 3: Simple Numbers -->
+        <div class="book-card">
+          <div>
+            <div class="book-meta">
+              <span class="book-tag">Unit Economics</span>
+              <span class="book-author">Greg Crabtree</span>
+            </div>
+            <h3>Simple Numbers, Straight Talk, Big Profits!</h3>
+            <div class="takeaway-box">
+              <strong>Bram's Audit Takeaway</strong>
+              Cures top-line revenue delusions in two chapters. Forces you to separate tax liabilities, measure labor efficiency, and judge every side project strictly on pre-tax net margin.
+            </div>
+          </div>
+          <a href="https://www.amazon.com/dp/1608320561" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+        </div>
+
+        <!-- Book 4: The Mom Test -->
+        <div class="book-card">
+          <div>
+            <div class="book-meta">
+              <span class="book-tag">Validation</span>
+              <span class="book-author">Rob Fitzpatrick</span>
+            </div>
+            <h3>The Mom Test: How to Talk to Customers When Everyone Is Lying to You</h3>
+            <div class="takeaway-box">
+              <strong>Bram's Audit Takeaway</strong>
+              Prevents the costliest process failure in micro-SaaS: wasting six months of evenings building software nobody pays for because polite peers complimented your pitch.
+            </div>
+          </div>
+          <a href="https://www.amazon.com/dp/1492180742" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+        </div>
+
+        <!-- Book 5: Work the System -->
+        <div class="book-card">
+          <div>
+            <div class="book-meta">
+              <span class="book-tag">Systems &amp; SOPs</span>
+              <span class="book-author">Sam Carpenter</span>
+            </div>
+            <h3>Work the System: The Simple Mechanics of Making More and Working Less</h3>
+            <div class="takeaway-box">
+              <strong>Bram's Audit Takeaway</strong>
+              If a micro-business depends on heroic late-night firefighting, it is a fragile job—not an asset. Document every repeatable task once so your evenings stay predictable.
+            </div>
+          </div>
+          <a href="https://www.amazon.com/dp/0980112702" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+        </div>
+
+        <!-- Book 6: The Checklist Manifesto -->
+        <div class="book-card">
+          <div>
+            <div class="book-meta">
+              <span class="book-tag">Quality Control</span>
+              <span class="book-author">Atul Gawande</span>
+            </div>
+            <h3>The Checklist Manifesto: How to Get Things Right</h3>
+            <div class="takeaway-box">
+              <strong>Bram's Audit Takeaway</strong>
+              Most financial and operational mistakes aren't caused by ignorance—they happen when tired operators skip dull verification steps. Checklists beat willpower every single night.
+            </div>
+          </div>
+          <a href="https://www.amazon.com/dp/0312430000" target="_blank" rel="noopener" class="book-link">View on Amazon →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Off the Clock / Belgian Beer Aficionado -->
+  <section id="glassware">
+    <div class="container">
+      <div class="beer-shell">
+        <div>
+          <span class="beer-kicker">Friday 20:00 // Off the Clock</span>
+          <h2>Patience, process control, and proper glassware.</h2>
+          <p>
+            Closing the weekly ledger on Friday night calls for something brewed with the same respect for time and craft as a durable business: a Westmalle Tripel, an aged Orval, a Rochefort 10, or a proper Cantillon Gueuze—always poured into the matching glass.
+          </p>
+          <p>
+            Good Belgian beer doesn't rush fermentation, and boring cash flow doesn't rush compounding. Both punish shortcuts.
+          </p>
+          <div class="beer-styles">
+            <span>Trappist Ales</span>
+            <span>Westmalle Tripel</span>
+            <span>Orval</span>
+            <span>Rochefort</span>
+            <span>Cantillon Gueuze</span>
+          </div>
+        </div>
+
+        <div class="beer-card-box">
+          <div class="beer-meta">For Fellow Beer Lovers</div>
+          <h3>Belgian Beer Card</h3>
+          <p>
+            If you appreciate authentic Belgian brewing—from Trappist monasteries to Senne Valley lambics—check out <strong>belgianbeercard.com</strong>. It's a free-to-start tasting passport where you log verified Belgian beers across classic styles and earn Guild ranks as you explore.
+          </p>
+          <a href="https://belgianbeercard.com/" target="_blank" rel="noopener" class="btn-primary">Explore BelgianBeerCard.com →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Channels & Weekly Cadence -->
   <section id="channels" class="section-alt">
     <div class="container">
       <div class="sec-head">
@@ -614,7 +818,6 @@
   </div>
 
   <script>
-    // 1. Vault Assets Content
     const ASSETS = {
       audit: {
         title: "The 7-Line Side-Hustle P&L Audit",
@@ -629,8 +832,8 @@
         text: `• HOSTING & STATIC SITES: GitHub Pages or Cloudflare Pages (€0/mo)\n• CUSTOM DOMAIN: Cloudflare Registrar or Porkbun (~€10/yr)\n• NEWSLETTER & AUDIENCE: Substack (€0/mo)\n• DATABASE & DIRECTORY BACKEND: Airtable Free Tier or Supabase Free Tier (€0/mo)\n• PAYMENTS & EU VAT COMPLIANCE: Stripe or Lemon Squeezy / Paddle (MoR handles EU VAT)\n• AUTOMATIONS: Make.com or n8n self-hosted (€0–€9/mo)\n• CONTACT FORMS: Formspree Free Tier or direct Proton Mail (€0/mo)\n\nOPERATIONAL RULE: Never upgrade to a paid SaaS tier until the asset generates 3x that tool's monthly cost in net margin.`
       },
       books: {
-        title: "The Audited Bookshelf (Zero Fluff)",
-        text: `1. The Goal — Eliyahu M. Goldratt\n   Why: The foundational manual on spotting system bottlenecks and throughput.\n\n2. $100M Offers — Alex Hormozi\n   Why: Strip away the loud packaging—the value equation and margin math are rock solid.\n\n3. Work the System — Sam Carpenter\n   Why: Treating a micro-business as documented procedures rather than heroic effort.\n\n4. The Mom Test — Rob Fitzpatrick\n   Why: Prevents you from wasting 6 months building a product nobody will pay for.\n\n5. Simple Numbers, Straight Talk, Big Profits — Greg Crabtree\n   Why: Unforgiving unit economics and labor efficiency ratios for small operators.`
+        title: "The Audited Bookshelf (6 Operational Reads)",
+        text: `1. Build Once, Sell Daily — Jaco Roets\n   Takeaway: Packaging existing 9-to-5 expertise into repeatable digital assets without quitting your day job.\n\n2. The Goal — Eliyahu M. Goldratt\n   Takeaway: Optimizing anything other than the primary bottleneck is pure operational drag.\n\n3. Simple Numbers, Straight Talk, Big Profits! — Greg Crabtree\n   Takeaway: Judge every project on pre-tax net margin and labor efficiency, never gross screenshots.\n\n4. The Mom Test — Rob Fitzpatrick\n   Takeaway: Prevents wasting 6 months building a product nobody actually pays for.\n\n5. Work the System — Sam Carpenter\n   Takeaway: Replace evening firefighting with documented SOPs so your 10-hour weekly cap holds.\n\n6. The Checklist Manifesto — Atul Gawande\n   Takeaway: Repeatable verification beats willpower when building after hours.`
       }
     };
 
@@ -648,7 +851,7 @@
       document.getElementById('copy-btn').textContent = "Copied ✓";
     }
 
-    // 2. Unit-Economics Simulator
+    // Unit-Economics Simulator
     const ids = ['i-rev', 'i-cac', 'i-cogs', 'i-churn', 'i-hrs'];
     function loadPreset(btn, rev, cac, cogs, churn, hrs) {
       document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
@@ -711,7 +914,7 @@
     ids.forEach(id => document.getElementById(id).addEventListener('input', updateSim));
     updateSim();
 
-    // 3. Go/No-Go Scorecard
+    // Go/No-Go Scorecard
     function updateScore() {
       const checked = document.querySelectorAll('.sc-box:checked').length;
       const num = document.getElementById('s-num');
