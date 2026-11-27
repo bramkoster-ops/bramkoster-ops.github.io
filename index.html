@@ -3,24 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bram Koster | Operations &amp; Unit-Economics Auditor</title>
-  <meta name="description" content="Operations auditor & micro-business builder. Auditing side-hustle unit economics and building boring, cash-flowing digital assets between 8:00 PM and 11:00 PM.">
+  <title>Bram Koster — Operations &amp; Unit-Economics Auditor</title>
+  <meta name="description" content="Operations auditor and micro-business builder. Auditing side-hustle unit economics and building cash-flowing digital assets between 8:00 PM and 11:00 PM.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0c0e10;
-      --surface: #14171a;
-      --surface-hover: #1b1f24;
-      --border: #252a30;
-      --text-primary: #eceff4;
-      --text-secondary: #9aa3af;
-      --text-muted: #646d78;
-      --accent-amber: #d99b26;
-      --accent-amber-dim: rgba(217, 155, 38, 0.12);
-      --accent-green: #34d399;
-      --accent-red: #f87171;
+      --bg: #111214;
+      --surface: #181a1d;
+      --surface-elevated: #1f2226;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(212, 163, 89, 0.45);
+      --text-primary: #f4f4f6;
+      --text-secondary: #a1a1aa;
+      --text-muted: #71717a;
+      --accent: #d4a359;
+      --accent-soft: rgba(212, 163, 89, 0.12);
+      --positive: #4ade80;
+      --negative: #f87171;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
     }
 
     * {
@@ -31,556 +35,756 @@
 
     body {
       background-color: var(--bg);
+      background-image: radial-gradient(circle at 50% 0%, rgba(212, 163, 89, 0.06) 0%, transparent 55%);
       color: var(--text-primary);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
-      padding: 0 1.25rem;
+      padding: 0 1.5rem;
     }
 
-    .container {
-      max-width: 780px;
+    .wrapper {
+      max-width: 840px;
       margin: 0 auto;
-      padding: 3.5rem 0 5rem;
+      padding: 3rem 0 6rem;
     }
 
-    /* Top Status Bar */
-    .status-bar {
+    /* Navigation */
+    nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      padding-bottom: 1.5rem;
+      padding-bottom: 2.5rem;
+      margin-bottom: 3.5rem;
       border-bottom: 1px solid var(--border);
-      margin-bottom: 3rem;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.78rem;
-      color: var(--text-secondary);
     }
 
-    .status-pill {
+    .brand {
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .brand span {
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .nav-cta {
+      background: var(--text-primary);
+      color: var(--bg) !important;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-weight: 600 !important;
+      font-size: 0.84rem !important;
+      transition: transform 0.2s ease, opacity 0.2s ease !important;
+    }
+
+    .nav-cta:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 180px;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 4.5rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.1rem;
+    }
+
+    .hero h1 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 3rem;
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      color: var(--text-primary);
+      margin-bottom: 1.35rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-lead {
+      font-size: 1.08rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      max-width: 54ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent);
+      color: #111214;
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 0.78rem 1.4rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.06);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
       background: var(--surface);
       border: 1px solid var(--border);
-      padding: 0.35rem 0.75rem;
-      border-radius: 999px;
+      color: var(--text-primary);
+      font-weight: 500;
+      font-size: 0.92rem;
+      padding: 0.78rem 1.4rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: border-color 0.2s ease, background 0.2s ease;
     }
 
-    .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background-color: var(--accent-green);
-      box-shadow: 0 0 8px var(--accent-green);
+    .btn-secondary:hover {
+      background: var(--surface-elevated);
+      border-color: rgba(255, 255, 255, 0.2);
     }
 
-    /* Hero Section */
-    .hero {
-      display: grid;
-      grid-template-columns: 88px 1fr;
-      gap: 1.75rem;
-      align-items: start;
-      margin-bottom: 3.5rem;
+    .portrait-wrap {
+      position: relative;
     }
 
-    .avatar {
-      width: 88px;
-      height: 88px;
-      border-radius: 12px;
+    .portrait {
+      width: 180px;
+      height: 220px;
       object-fit: cover;
+      border-radius: var(--radius-lg);
       border: 1px solid var(--border);
-      background-color: var(--surface);
+      box-shadow: var(--shadow);
+      background: var(--surface);
     }
 
-    .hero h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.2;
-      margin-bottom: 0.4rem;
-    }
-
-    .hero-role {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.88rem;
-      color: var(--accent-amber);
-      margin-bottom: 1.1rem;
-    }
-
-    .hero-bio {
-      color: var(--text-secondary);
-      font-size: 1.02rem;
-      max-width: 60ch;
-    }
-
-    /* Metrics Strip */
-    .metrics-grid {
+    /* Key Pillars */
+    .pillars {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-bottom: 4rem;
+      gap: 1.25rem;
+      margin-bottom: 5rem;
     }
 
-    .metric-card {
+    .pillar {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.1rem 1.25rem;
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
     }
 
-    .metric-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--text-muted);
+    .pillar-stat {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.85rem;
+      font-weight: 500;
+      color: var(--text-primary);
       margin-bottom: 0.35rem;
     }
 
-    .metric-value {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 1.25rem;
+    .pillar-title {
+      font-size: 0.9rem;
       font-weight: 600;
       color: var(--text-primary);
+      margin-bottom: 0.35rem;
     }
 
-    .metric-sub {
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      margin-top: 0.2rem;
-    }
-
-    /* Section Headers */
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.65rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .section-header h2 {
-      font-family: 'JetBrains Mono', monospace;
+    .pillar-desc {
       font-size: 0.85rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-primary);
+      color: var(--text-secondary);
+      line-height: 1.55;
     }
 
-    .section-tag {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.75rem;
-      color: var(--text-muted);
+    /* Section Titles */
+    .section-head {
+      margin-bottom: 2rem;
+    }
+
+    .section-head h2 {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-head p {
+      color: var(--text-secondary);
+      font-size: 0.98rem;
     }
 
     section {
-      margin-bottom: 4rem;
+      margin-bottom: 5rem;
     }
 
-    /* Channel Cards */
-    .channel-grid {
+    /* Interactive Margin Calculator */
+    .audit-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .audit-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .control {
+      margin-bottom: 1.35rem;
+    }
+
+    .control:last-child {
+      margin-bottom: 0;
+    }
+
+    .control-top {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .control-top span:first-child {
+      color: var(--text-secondary);
+    }
+
+    .control-top span:last-child {
+      font-weight: 600;
+      color: var(--text-primary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 5px;
+      background: var(--surface-elevated);
+      border-radius: 999px;
+      outline: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--accent);
+      cursor: pointer;
+      border: 2px solid var(--bg);
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .statement {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+    }
+
+    .statement-header {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .line-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      padding: 0.45rem 0;
+      color: var(--text-secondary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .line-item.deduction span:last-child {
+      color: var(--negative);
+    }
+
+    .line-summary {
+      border-top: 1px solid var(--border);
+      margin-top: 0.75rem;
+      padding-top: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .line-summary-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .line-summary-val {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 500;
+      color: var(--positive);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .hourly-note {
+      margin-top: 0.65rem;
+      padding-top: 0.65rem;
+      border-top: 1px dashed var(--border);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Publications & Channels */
+    .channels {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
+      gap: 1.25rem;
     }
 
-    .channel-card {
+    .channel {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      padding: 1.6rem;
       text-decoration: none;
-      color: inherit;
-      transition: border-color 0.15s ease, background-color 0.15s ease;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
 
-    .channel-card:hover {
-      background: var(--surface-hover);
-      border-color: var(--accent-amber);
+    .channel:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-hover);
+      background: var(--surface-elevated);
     }
 
-    .channel-top {
+    .channel-meta {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
     }
 
-    .channel-name {
+    .channel-tag {
+      font-size: 0.75rem;
       font-weight: 600;
-      font-size: 1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .channel-arrow {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .channel:hover .channel-arrow {
+      transform: translateX(3px);
+      color: var(--accent);
+    }
+
+    .channel h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
       color: var(--text-primary);
+      margin-bottom: 0.45rem;
     }
 
-    .channel-badge {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.7rem;
-      padding: 0.15rem 0.5rem;
-      border-radius: 4px;
-      background: var(--accent-amber-dim);
-      color: var(--accent-amber);
-    }
-
-    .channel-desc {
-      font-size: 0.88rem;
+    .channel p {
+      font-size: 0.9rem;
       color: var(--text-secondary);
-      margin-bottom: 0.9rem;
+      line-height: 1.55;
+      margin-bottom: 1.1rem;
     }
 
-    .channel-handle {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.78rem;
+    .channel-url {
+      font-size: 0.82rem;
+      font-weight: 500;
       color: var(--text-muted);
     }
 
-    /* Interactive Unit-Economics Calculator */
-    .calc-box {
+    /* Weekly Cadence */
+    .cadence-list {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.5rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
     }
 
-    .calc-intro {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      margin-bottom: 1.5rem;
-    }
-
-    .calc-grid {
+    .cadence-item {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.75rem;
-      align-items: center;
-    }
-
-    .input-group {
-      margin-bottom: 1rem;
-    }
-
-    .input-group:last-child {
-      margin-bottom: 0;
-    }
-
-    .input-group label {
-      display: flex;
-      justify-content: space-between;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.78rem;
-      color: var(--text-secondary);
-      margin-bottom: 0.35rem;
-    }
-
-    .input-group input[type="range"] {
-      width: 100%;
-      accent-color: var(--accent-amber);
-      cursor: pointer;
-    }
-
-    .ledger-output {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 1.15rem;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.82rem;
-    }
-
-    .ledger-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.35rem 0;
-      color: var(--text-secondary);
-    }
-
-    .ledger-row.deduct {
-      color: var(--accent-red);
-    }
-
-    .ledger-row.total {
-      border-top: 1px dashed var(--border);
-      margin-top: 0.5rem;
-      padding-top: 0.65rem;
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: var(--accent-green);
-    }
-
-    .ledger-row.hourly {
-      font-size: 0.78rem;
-      color: var(--accent-amber);
-      padding-top: 0.2rem;
-    }
-
-    /* Cadence & Rules List */
-    .audit-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.9rem;
-    }
-
-    .audit-table td {
-      padding: 0.85rem 0;
+      grid-template-columns: 150px 1fr;
+      gap: 1.5rem;
+      padding: 1.35rem 1.75rem;
       border-bottom: 1px solid var(--border);
-      vertical-align: top;
+      align-items: baseline;
     }
 
-    .audit-table tr:last-child td {
+    .cadence-item:last-child {
       border-bottom: none;
     }
 
-    .audit-key {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--accent-amber);
-      width: 140px;
-      padding-right: 1rem;
+    .cadence-day {
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent);
     }
 
-    .audit-val {
-      color: var(--text-secondary);
-    }
-
-    .audit-val strong {
+    .cadence-content strong {
       color: var(--text-primary);
-      font-weight: 500;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .cadence-content span {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
     }
 
     /* Footer */
     footer {
       border-top: 1px solid var(--border);
-      padding-top: 2rem;
+      padding-top: 2.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
       gap: 1rem;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
+      font-size: 0.86rem;
       color: var(--text-muted);
     }
 
     footer a {
       color: var(--text-secondary);
       text-decoration: none;
+      transition: color 0.2s ease;
     }
 
     footer a:hover {
-      color: var(--accent-amber);
+      color: var(--text-primary);
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 720px) {
       .hero {
         grid-template-columns: 1fr;
-        gap: 1.25rem;
+        gap: 2rem;
       }
-      .metrics-grid,
-      .channel-grid,
-      .calc-grid {
+      .portrait-wrap {
+        order: -1;
+      }
+      .portrait {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+      }
+      .hero h1 {
+        font-size: 2.35rem;
+      }
+      .pillars,
+      .audit-layout,
+      .channels {
         grid-template-columns: 1fr;
       }
-      .audit-key {
-        width: 110px;
+      .cadence-item {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+      }
+      .nav-links a:not(.nav-cta) {
+        display: none;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Top Status Bar -->
-    <div class="status-bar">
-      <div class="status-pill">
-        <span class="dot"></span>
-        <span>BUILD WINDOW: 20:00 – 23:00 CET</span>
+  <div class="wrapper">
+    <!-- Top Bar -->
+    <nav>
+      <a href="#" class="brand">Bram Koster <span>/ @bramkoster.ops</span></a>
+      <div class="nav-links">
+        <a href="#audit-tool">Margin Audit</a>
+        <a href="#dispatches">Dispatches</a>
+        <a href="#cadence">Schedule</a>
+        <a href="https://bramkoster1985.substack.com" target="_blank" rel="noopener" class="nav-cta">Read The Friday Audit</a>
       </div>
-      <span>LOC: BELGIUM // OPSEC: NO DAYTIME CALLS</span>
-    </div>
+    </nav>
 
     <!-- Hero -->
     <header class="hero">
-      <img src="https://avatars.githubusercontent.com/u/bramkoster-ops" onerror="this.src='https://github.com/bramkoster-ops.png'" alt="Bram Koster" class="avatar">
       <div>
-        <h1>Bram Koster</h1>
-        <div class="hero-role">Operations &amp; Unit-Economics Auditor — @bramkoster.ops</div>
-        <p class="hero-bio">
-          15 years auditing European supply chains and manufacturing sites. Now auditing viral side-hustle claims and building boring, cash-flowing digital assets strictly after hours. No hype—just the actual numbers and proper glassware.
+        <div class="eyebrow">Operations &amp; Unit-Economics Auditor</div>
+        <h1>Boring cash flow, audited <em>after hours.</em></h1>
+        <p class="hero-lead">
+          After 15 years auditing European supply chains and manufacturing sites, I spend 10 hours a week—strictly between 8:00 PM and 11:00 PM—stress-testing viral business claims and building durable digital assets.
         </p>
+        <div class="hero-actions">
+          <a href="https://bramkoster1985.substack.com" target="_blank" rel="noopener" class="btn-primary">Subscribe on Substack →</a>
+          <a href="#audit-tool" class="btn-secondary">Run a Margin Check</a>
+        </div>
+      </div>
+      <div class="portrait-wrap">
+        <img src="https://github.com/bramkoster-ops.png" alt="Bram Koster" class="portrait">
       </div>
     </header>
 
-    <!-- Hard Constraints Strip -->
-    <div class="metrics-grid">
-      <div class="metric-card">
-        <div class="metric-label">Weekly Time Cap</div>
-        <div class="metric-value">10.0 hrs</div>
-        <div class="metric-sub">8:00 PM – 11:00 PM evenings</div>
+    <!-- Operating Constraints -->
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-stat">10 hrs/wk</div>
+        <div class="pillar-title">Evening Build Window</div>
+        <p class="pillar-desc">Built strictly between 20:00 and 23:00 alongside a full-time career. Zero daytime client calls.</p>
       </div>
-      <div class="metric-card">
-        <div class="metric-label">Tax &amp; Friction Baseline</div>
-        <div class="metric-value">21% VAT</div>
-        <div class="metric-sub">+ CAC, gateway fees &amp; churn</div>
+      <div class="pillar">
+        <div class="pillar-stat">21% VAT</div>
+        <div class="pillar-title">Full-Cost Accounting</div>
+        <p class="pillar-desc">Every revenue claim is audited against customer acquisition cost, taxes, gateway fees, and churn.</p>
       </div>
-      <div class="metric-card">
-        <div class="metric-label">Asset Horizon</div>
-        <div class="metric-value">5–6 mos</div>
-        <div class="metric-sub">Tedious setup before yield</div>
+      <div class="pillar">
+        <div class="pillar-stat">5–6 mos</div>
+        <div class="pillar-title">Patient Compounding</div>
+        <p class="pillar-desc">No overnight shortcuts—just methodical setup, clean processes, and proper glassware on Friday night.</p>
       </div>
     </div>
 
-    <!-- Channels & Dispatches -->
-    <section>
-      <div class="section-header">
-        <h2>01 // Channels &amp; Dispatches</h2>
-        <span class="section-tag">ACTIVE FEEDS</span>
+    <!-- Interactive Unit-Economics Tool -->
+    <section id="audit-tool">
+      <div class="section-head">
+        <h2>The Revenue Screenshot Audit</h2>
+        <p>Top-line revenue screenshots rarely survive European VAT, paid acquisition, and fulfillment drag.</p>
       </div>
-      <div class="channel-grid">
-        <a href="https://bramkoster1985.substack.com" target="_blank" rel="noopener" class="channel-card">
-          <div>
-            <div class="channel-top">
-              <span class="channel-name">The Friday Audit</span>
-              <span class="channel-badge">SUBSTACK</span>
-            </div>
-            <p class="channel-desc">Weekly P&amp;L teardowns, niche B2B directory logs, and unvarnished unit-economics post-mortems.</p>
-          </div>
-          <span class="channel-handle">bramkoster1985.substack.com →</span>
-        </a>
 
-        <a href="https://www.instagram.com/bramkoster.ops" target="_blank" rel="noopener" class="channel-card">
+      <div class="audit-card">
+        <div class="audit-layout">
           <div>
-            <div class="channel-top">
-              <span class="channel-name">Short-Form Audits</span>
-              <span class="channel-badge">INSTAGRAM</span>
+            <div class="control">
+              <div class="control-top">
+                <span>Claimed Monthly Gross</span>
+                <span id="val-rev">€5,000</span>
+              </div>
+              <input type="range" id="in-rev" min="1000" max="25000" step="500" value="5000">
             </div>
-            <p class="channel-desc">60-second spreadsheet teardowns, 8 PM build logs, and dark-mode operational checklists.</p>
-          </div>
-          <span class="channel-handle">@bramkoster.ops →</span>
-        </a>
 
-        <a href="https://www.youtube.com/@bramkoster-ops" target="_blank" rel="noopener" class="channel-card">
-          <div>
-            <div class="channel-top">
-              <span class="channel-name">Side-Hustle Auditor</span>
-              <span class="channel-badge">YOUTUBE</span>
-            </div>
-            <p class="channel-desc">Screen-recorded workflow builds, micro-SaaS margin audits, and automation teardown videos.</p>
-          </div>
-          <span class="channel-handle">@bramkoster-ops →</span>
-        </a>
-
-        <a href="https://www.facebook.com/bramkoster.ops" target="_blank" rel="noopener" class="channel-card">
-          <div>
-            <div class="channel-top">
-              <span class="channel-name">Field Notes</span>
-              <span class="channel-badge">FACEBOOK</span>
-            </div>
-            <p class="channel-desc">Mirrored video audits, operational frameworks, and community discussions.</p>
-          </div>
-          <span class="channel-handle">facebook.com/bramkoster.ops →</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- Interactive Unit-Economics Sanity Check -->
-    <section>
-      <div class="section-header">
-        <h2>02 // The "Screenshot" Sanity Check</h2>
-        <span class="section-tag">INTERACTIVE AUDIT</span>
-      </div>
-      <div class="calc-box">
-        <p class="calc-intro">
-          Most "€10k/month" screenshots hide ad spend, VAT, payment processing, and unpaid support drag. Move the sliders to run the actual numbers:
-        </p>
-        <div class="calc-grid">
-          <div>
-            <div class="input-group">
-              <label><span>Gross Monthly Revenue</span> <span id="val-rev">€5,000</span></label>
-              <input type="range" id="in-rev" min="1000" max="20000" step="500" value="5000">
-            </div>
-            <div class="input-group">
-              <label><span>Ad Spend / CAC (%)</span> <span id="val-cac">30%</span></label>
+            <div class="control">
+              <div class="control-top">
+                <span>Paid Acquisition (CAC)</span>
+                <span id="val-cac">30%</span>
+              </div>
               <input type="range" id="in-cac" min="0" max="60" step="5" value="30">
             </div>
-            <div class="input-group">
-              <label><span>Software &amp; Fulfillment (%)</span> <span id="val-cogs">15%</span></label>
+
+            <div class="control">
+              <div class="control-top">
+                <span>Software &amp; Fulfillment</span>
+                <span id="val-cogs">15%</span>
+              </div>
               <input type="range" id="in-cogs" min="5" max="40" step="5" value="15">
             </div>
-            <div class="input-group">
-              <label><span>Monthly Hours Worked</span> <span id="val-hrs">40 hrs</span></label>
+
+            <div class="control">
+              <div class="control-top">
+                <span>Monthly Operator Hours</span>
+                <span id="val-hrs">40 hrs</span>
+              </div>
               <input type="range" id="in-hrs" min="10" max="120" step="5" value="40">
             </div>
           </div>
 
-          <div class="ledger-output">
-            <div class="ledger-row">
-              <span>Gross Claimed</span>
+          <div class="statement">
+            <div class="statement-header">Audited Monthly Ledger</div>
+            <div class="line-item">
+              <span>Gross Revenue</span>
               <span id="out-gross">€5,000</span>
             </div>
-            <div class="ledger-row deduct">
-              <span>- 21% VAT (Included)</span>
+            <div class="line-item deduction">
+              <span>VAT Liability (21% incl.)</span>
               <span id="out-vat">-€868</span>
             </div>
-            <div class="ledger-row deduct">
-              <span>- Ad Spend (CAC)</span>
+            <div class="line-item deduction">
+              <span>Ad Spend / Acquisition</span>
               <span id="out-cac">-€1,500</span>
             </div>
-            <div class="ledger-row deduct">
-              <span>- Stripe/Gateway (2.9%)</span>
+            <div class="line-item deduction">
+              <span>Payment Processing (2.9%)</span>
               <span id="out-fee">-€145</span>
             </div>
-            <div class="ledger-row deduct">
-              <span>- Stack &amp; Fulfillment</span>
+            <div class="line-item deduction">
+              <span>Stack &amp; Fulfillment</span>
               <span id="out-cogs">-€750</span>
             </div>
-            <div class="ledger-row total">
-              <span>Pre-Tax Net Margin</span>
-              <span id="out-net">€1,737 (34.7%)</span>
+
+            <div class="line-summary">
+              <span class="line-summary-label">Pre-Tax Net</span>
+              <span class="line-summary-val" id="out-net">€1,737</span>
             </div>
-            <div class="ledger-row hourly">
-              <span>Effective Hourly Yield</span>
-              <span id="out-hr">€43.43 / hr</span>
+            <div class="hourly-note">
+              <span id="out-margin">34.7% net margin</span>
+              <span id="out-hr">€43.43 / hr effective</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Weekly Cadence & Operating Protocol -->
-    <section>
-      <div class="section-header">
-        <h2>03 // Weekly Audit Cadence</h2>
-        <span class="section-tag">SCHEDULE</span>
+    <!-- Dispatches & Channels -->
+    <section id="dispatches">
+      <div class="section-head">
+        <h2>Dispatches &amp; Channels</h2>
+        <p>Where I publish weekly teardowns, build logs, and operational frameworks.</p>
       </div>
-      <table class="audit-table">
-        <tr>
-          <td class="audit-key">MONDAY</td>
-          <td class="audit-val"><strong>The Hustle Audit</strong> — Dissecting one trending business model against real unit economics.</td>
-        </tr>
-        <tr>
-          <td class="audit-key">WEDNESDAY</td>
-          <td class="audit-val"><strong>Systems &amp; Checklists</strong> — 7-slide dark-mode SOPs, tech stacks, and audited bookshelf notes.</td>
-        </tr>
-        <tr>
-          <td class="audit-key">THURSDAY</td>
-          <td class="audit-val"><strong>The 8 PM Build</strong> — Live progress on automated directories, micro-SaaS tools, and zero-drag workflows.</td>
-        </tr>
-        <tr>
-          <td class="audit-key">FRIDAY 20:00</td>
-          <td class="audit-val"><strong>The Friday Audit</strong> — Long-form Substack dispatch + end-of-week ledger close.</td>
-        </tr>
-      </table>
+
+      <div class="channels">
+        <a href="https://bramkoster1985.substack.com" target="_blank" rel="noopener" class="channel">
+          <div>
+            <div class="channel-meta">
+              <span class="channel-tag">Newsletter</span>
+              <span class="channel-arrow">→</span>
+            </div>
+            <h3>The Friday Audit</h3>
+            <p>Long-form P&amp;L breakdowns, niche B2B directory case studies, and unvarnished post-mortems delivered every Friday at 8:00 PM.</p>
+          </div>
+          <span class="channel-url">bramkoster1985.substack.com</span>
+        </a>
+
+        <a href="https://www.instagram.com/bramkoster.ops" target="_blank" rel="noopener" class="channel">
+          <div>
+            <div class="channel-meta">
+              <span class="channel-tag">Instagram</span>
+              <span class="channel-arrow">→</span>
+            </div>
+            <h3>60-Second Teardowns</h3>
+            <p>Concise unit-economics audits, dark-mode operational checklists, and late-evening build snapshots.</p>
+          </div>
+          <span class="channel-url">@bramkoster.ops</span>
+        </a>
+
+        <a href="https://www.youtube.com/@bramkoster-ops" target="_blank" rel="noopener" class="channel">
+          <div>
+            <div class="channel-meta">
+              <span class="channel-tag">YouTube</span>
+              <span class="channel-arrow">→</span>
+            </div>
+            <h3>Side-Hustle Quality Auditor</h3>
+            <p>Screen-recorded spreadsheet audits, micro-SaaS margin reviews, and lean automation workflows.</p>
+          </div>
+          <span class="channel-url">@bramkoster-ops</span>
+        </a>
+
+        <a href="https://www.facebook.com/bramkoster.ops" target="_blank" rel="noopener" class="channel">
+          <div>
+            <div class="channel-meta">
+              <span class="channel-tag">Facebook</span>
+              <span class="channel-arrow">→</span>
+            </div>
+            <h3>Field Notes &amp; Archive</h3>
+            <p>Mirrored video breakdowns, community discussions, and operational systems notes.</p>
+          </div>
+          <span class="channel-url">facebook.com/bramkoster.ops</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Weekly Cadence -->
+    <section id="cadence">
+      <div class="section-head">
+        <h2>Weekly Publishing Cadence</h2>
+        <p>Consistent output without burning out the day job.</p>
+      </div>
+
+      <div class="cadence-list">
+        <div class="cadence-item">
+          <div class="cadence-day">Monday</div>
+          <div class="cadence-content">
+            <strong>The Hustle Audit</strong>
+            <span>Stress-testing one trending side-hustle or micro-business model against real-world unit economics.</span>
+          </div>
+        </div>
+        <div class="cadence-item">
+          <div class="cadence-day">Wednesday</div>
+          <div class="cadence-content">
+            <strong>Systems &amp; Checklists</strong>
+            <span>7-slide operational SOPs, lean automation stacks, and notes from the audited bookshelf.</span>
+          </div>
+        </div>
+        <div class="cadence-item">
+          <div class="cadence-day">Thursday</div>
+          <div class="cadence-content">
+            <strong>The 8 PM Build</strong>
+            <span>Behind-the-scenes progress on niche directories, single-problem tools, and zero-drag workflows.</span>
+          </div>
+        </div>
+        <div class="cadence-item">
+          <div class="cadence-day">Friday · 20:00</div>
+          <div class="cadence-content">
+            <strong>The Friday Audit</strong>
+            <span>Weekly Substack newsletter dispatch and end-of-week ledger close.</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <span>© 2026 BRAM KOSTER // BORING CASH FLOW</span>
+      <span>© 2026 Bram Koster. Built with zero bloat.</span>
       <a href="mailto:bramkoster.ops@proton.me">bramkoster.ops@proton.me</a>
     </footer>
   </div>
@@ -598,8 +802,8 @@
       const hrs = Number(inHrs.value);
 
       document.getElementById('val-rev').textContent = '€' + rev.toLocaleString();
-      document.getElementById('val-cac').textContent = (cacPct * 100) + '%';
-      document.getElementById('val-cogs').textContent = (cogsPct * 100) + '%';
+      document.getElementById('val-cac').textContent = Math.round(cacPct * 100) + '%';
+      document.getElementById('val-cogs').textContent = Math.round(cogsPct * 100) + '%';
       document.getElementById('val-hrs').textContent = hrs + ' hrs';
 
       const vat = rev - (rev / 1.21);
@@ -617,10 +821,11 @@
       document.getElementById('out-cogs').textContent = '-€' + Math.round(cogs).toLocaleString();
 
       const netEl = document.getElementById('out-net');
-      netEl.textContent = '€' + Math.round(net).toLocaleString() + ' (' + margin + '%)';
-      netEl.style.color = net >= 0 ? 'var(--accent-green)' : 'var(--accent-red)';
+      netEl.textContent = '€' + Math.round(net).toLocaleString();
+      netEl.style.color = net >= 0 ? 'var(--positive)' : 'var(--negative)';
 
-      document.getElementById('out-hr').textContent = '€' + hourly + ' / hr';
+      document.getElementById('out-margin').textContent = margin + '% net margin';
+      document.getElementById('out-hr').textContent = '€' + hourly + ' / hr effective';
     }
 
     [inRev, inCac, inCogs, inHrs].forEach(el => el.addEventListener('input', updateAudit));
